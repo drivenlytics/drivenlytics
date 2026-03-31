@@ -1,0 +1,96 @@
+{
+  "_comment": "Drivenlytics — Claude Code MCP Config",
+  "_instructions": "Taskade and context7 are enabled by default. Set env vars for API keys: TASKADE_API_KEY, TASKADE_WORKSPACE_ID, VERCEL_TOKEN. Enable stitch when Google API key is ready.",
+  "mcpServers": {
+    "taskade": {
+      "_purpose": "Official Taskade MCP — manage workspaces, projects, tasks, and integrations.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@taskade/mcp-server"
+      ],
+      "env": {
+        "TASKADE_API_KEY": "${TASKADE_API_KEY}",
+        "TASKADE_WORKSPACE_ID": "${TASKADE_WORKSPACE_ID}"
+      },
+      "disabled": false
+    },
+    "context7": {
+      "_purpose": "Live documentation lookup for Next.js, Tailwind, React, etc.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "disabled": false
+    },
+    "vercel": {
+      "_purpose": "Deploy to Vercel, check build status, view logs, check domain availability.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@robinson_ai_systems/vercel-mcp"
+      ],
+      "env": {
+        "VERCEL_TOKEN": "${VERCEL_TOKEN}"
+      },
+      "disabled": false
+    },
+    "stitch": {
+      "_purpose": "Google Stitch API — Google Calendar, Gmail, and other Google services.",
+      "serverUrl": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "${GOOGLE_API_KEY}"
+      },
+      "disabled": true
+    },
+    "supabase-mcp-server": {
+      "_purpose": "Database for storing client data, form submissions, etc.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "${SUPABASE_ACCESS_TOKEN}"
+      ],
+      "disabled": true
+    },
+    "notion-mcp-server": {
+      "_purpose": "Connect to Notion to read/write pages.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer ${NOTION_API_KEY}\", \"Notion-Version\": \"2022-06-28\"}"
+      },
+      "disabled": true
+    },
+    "apify": {
+      "_purpose": "Web scraping at scale — useful for lead list building.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@apify/actors-mcp-server"
+      ],
+      "env": {
+        "APIFY_TOKEN": "${APIFY_TOKEN}"
+      },
+      "disabled": true
+    },
+    "fireflies": {
+      "_purpose": "Meeting transcription — pull notes and action items from calls.",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://api.fireflies.ai/mcp",
+        "--header",
+        "Authorization: Bearer ${FIREFLIES_API_KEY}"
+      ],
+      "disabled": true
+    }
+  },
+  "disabledTools": []
+}
