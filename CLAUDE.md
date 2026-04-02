@@ -1,5 +1,8 @@
 # Drivenlytics — Claude Instructions
 
+## DND Folder Rule
+Never read files in `/dnd/` unless Lawrence explicitly asks. When asked, read only what's needed for the task, then leave the folder alone.
+
 ## Section 1: Agency Identity & Context
 
 **Drivenlytics** is a performance-driven marketing agency. Solo operator: **Lawrence**. AI-augmented execution model — built for speed, quality, and results.
