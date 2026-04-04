@@ -102,7 +102,10 @@ Your visual direction:
 
 ## Target Client Profile (Quick Ref)
 
-**Industries:** 
-**Price point:**
-**What they care about most:**
+**Detailed ICP:** [docs/marketing/icp.md](file:///Users/lawrence/Dev/AntiGravity_IDE/Drivenlytics/docs/marketing/icp.md)
+
+- **Archetype:** The Hero (with Magician tendencies)
+- **Primary Traits:** Ambitious, competitive, skeptical of hype.
+- **Pain Points:** Stalling at a scale plateau, market shifts, or ruthless competition.
+- **Motivation:** To conquer, not just survive; seeking mastery and recognition.
 

@@ -213,8 +213,13 @@ If stuck in a loop where the system repeats itself:
 - Build in AI Studio for visuals
 - Bring into code for scalability and implementation
 
+### Design Inspiration — Start Here
+1. Visit `godly.website` — curated gallery of the best web design
+2. Browse by category or style to find 2–3 sites that match your vision
+3. Screenshot or note the URLs for HTML extraction
+
 ### HTML Extraction for Design Inspiration
-1. Find a website you like (e.g., image generator)
+1. Find a website you like (e.g., from godly.website)
 2. Copy URL
 3. Go to Google and search "HTML website extractor"
 4. Enter URL and click "view source"
