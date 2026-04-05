@@ -5,7 +5,7 @@ export const site = {
   title: 'AI-Augmented Marketing Agency',
   description:
     'Performance-driven marketing for high-ticket offers, SaaS, and digital brands. Built for speed, quality, and results.',
-  tagline: 'Marketing that moves.',
+  tagline: '',
 
   owner: {
     name: 'Lawrence',
@@ -20,9 +20,8 @@ export const site = {
   ],
 
   hero: {
-    headline: 'Marketing that actually works.',
-    subheading:
-      'AI-augmented execution for high-ticket coaching, SaaS, and marketing platforms. From strategy through to launch.',
+    headline: '',
+    subheading: '',
     cta: 'Get Started',
   },
 
