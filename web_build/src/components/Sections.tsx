@@ -23,8 +23,8 @@ export const Navbar = () => (
             <a href="#testimonials" className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Results</a>
           </div>
         </div>
-        <a href="mailto:hello@drivenlytics.com" className="px-8 py-3.5 bg-white text-black text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-brand-purple hover:text-white transition-all duration-500 shadow-2xl shadow-white/5">
-          Get Started
+        <a href="mailto:hello@drivenlytics.com" className="px-8 py-3.5 bg-white text-black text-[20px] font-black uppercase tracking-[0.2em] rounded-full transition-all duration-500 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
+          Start
         </a>
       </div>
     </div>
@@ -32,7 +32,7 @@ export const Navbar = () => (
 );
 
 export const Hero = () => (
-  <section className="relative pt-24 pb-32 px-6 min-h-screen flex flex-col items-center overflow-hidden">
+  <section className="relative pt-12 pb-0 px-6 flex flex-col items-center overflow-hidden">
     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/20 blur-[180px] rounded-full -z-10 animate-pulse" />
     <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-blue/10 blur-[180px] rounded-full -z-10" />
 
@@ -41,25 +41,25 @@ export const Hero = () => (
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="hero-gradient-border w-full p-12 md:p-24 relative overflow-hidden mb-16"
+        className="hero-gradient-border w-full p-12 md:p-24 relative overflow-hidden mb-0"
       >
         <div className="relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-brand-purple text-[10px] font-black uppercase tracking-[0.4em] mb-12"
+            className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-brand-purple text-[20px] font-black uppercase tracking-[0.4em] mb-12"
           >
             <Sparkles className="w-4 h-4" />
             The Analytical Alchemist
           </motion.div>
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 leading-[0.85] uppercase italic text-white flex items-center justify-center gap-6">
-            <img src="/logo.svg" alt="" className="h-[1em] w-auto" />
+            <img src="/logo.svg" alt="" className="h-[1.4em] w-auto" />
             DRIVENLYTICS
           </h1>
 
-          <p className="text-xl md:text-3xl text-gray-400 max-w-3xl mx-auto leading-tight font-medium text-center">
+          <p className="text-xl md:text-3xl text-gray-400 max-w-3xl ml-[255px] leading-tight font-medium text-center">
             Data-Driven Performance Marketing Solutions
           </p>
         </div>
@@ -74,9 +74,9 @@ export const Hero = () => (
         transition={{ delay: 0.6 }}
         className="flex flex-col items-center gap-10"
       >
-        <button className="group relative px-14 py-6 bg-white text-black font-black text-xl uppercase tracking-widest rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_50px_-12px_rgba(255,255,255,0.5)]">
-          <span className="relative z-10 flex items-center gap-4">
-            Get Started <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
+        <button className="group relative px-14 py-6 bg-white text-black font-black text-[24px] uppercase tracking-widest rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
+          <span className="relative z-10 flex items-center gap-5">
+            Start <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
           </span>
         </button>
 
@@ -88,7 +88,7 @@ export const Hero = () => (
               </div>
             ))}
           </div>
-          <span className="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em]">Trusted by 7–9 figure market leaders</span>
+          <span className="text-gray-500 text-[30px] font-black uppercase tracking-[0.3em]">Trusted by 7–9 figure market leaders</span>
         </div>
       </motion.div>
     </div>
@@ -115,16 +115,16 @@ export const Services = () => {
     },
     {
       title: "Content Retainer",
-      price: "$1,000/month",
-      type: "monthly",
+      price: "$1,000/mo.",
+      type: " ",
       desc: "4 SEO blog posts OR 1 email sequence OR 8 social posts + strategy",
       delivery: "Ongoing",
       icon: <Layers className="w-10 h-10" />
     },
     {
       title: "Custom / Full-Stack",
-      price: "$5,000+/month",
-      type: "monthly",
+      price: "$5,000+/mo.",
+      type: "",
       desc: "Site builds, funnels, email infrastructure, ads, tracking, AI automation",
       delivery: "Strategic partnership",
       icon: <BarChart3 className="w-10 h-10" />
@@ -135,8 +135,8 @@ export const Services = () => {
     <section id="services" className="py-40 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="mb-32 text-center md:text-left">
-          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-xs mb-6 block">The Arsenal</span>
-          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Strategic <br />Breakthroughs</h2>
+          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Arsenal</span>
+          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Creative Strategic <br />Breakthroughs</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
@@ -152,7 +152,7 @@ export const Services = () => {
                 {s.icon}
               </div>
               <h3 className="text-2xl font-black uppercase tracking-tight mb-4 leading-tight">{s.title}</h3>
-              <div className="mb-8 flex items-baseline gap-2">
+              <div className="mb-8 flex flex-col gap-1">
                 <span className="text-4xl font-black text-white">{s.price}</span>
                 <span className="text-gray-600 text-[10px] font-black uppercase tracking-widest">{s.type}</span>
               </div>
@@ -200,8 +200,8 @@ export const Process = () => {
     <section id="process" className="py-40 px-6 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-32 text-center">
-          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-xs mb-6 block">The Methodology</span>
-          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Analytical Alchemy</h2>
+          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Methodology</span>
+          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none [word-spacing:1rem]">Analytical Alchemy</h2>
         </div>
         <div className="space-y-12">
           {phases.map((p, i) => (
@@ -240,19 +240,21 @@ export const Process = () => {
 
 export const Testimonials = () => {
   const testimonials = [
-    { name: "Tanner Chidester", title: "8-figure Earner & 4X Two Comma Club Member", quote: "Lawrence over delivers. He's thorough, dedicated, and ensures he has correct information to benefit clients." },
-    { name: "Benson Chidester", title: "COO, Marketer, Coach", quote: "Lawrence is detailed, completes work on time, prompt, and willing to help. Highly recommended copywriter." },
-    { name: "Yasir M.", title: "7-figure Makeup Brand & #1 Amazon Best-Seller, Lovoir", quote: "Professional, helpful, and great to work with. Assisted with Facebook ads, video scripts, USPs, and SaaS content." },
-    { name: "David N.", title: "Founder, Marketer, Wellness Coach, Optometrist", quote: "Reliable, honest, great listener. His words establish immediate trust with readers and create amazing copy." },
-    { name: "Thore Hauthal", title: "8-figure & 4X Two Comma Club Member", quote: "Gifted writer with deep understanding of market psychology. Goes beyond what's asked and delivers excellent work." },
-    { name: "Isak M.", title: "Founder & Email Marketer, ISAMO Consulting", quote: "Produces high-quality copy quickly. Email copywriting engages leads at new levels with exceptional subject lines." }
+    { name: "Benson Chidester", title: "COO, Marketer, Coach — 8-figure Earner & 4X Two Comma Club Member (Tanner Chidester)", quote: "If there's one word to describe Lawrence — he over delivers. He's thorough, dedicated, makes sure he has all the correct information to make the copy as beneficial as possible. If you're looking for a copywriter who's detailed, gets the job done on time, and is willing to do whatever it takes — Lawrence is definitely your guy." },
+    { name: "Yasir M.", title: "Founder, Lovoir — 7-figure Makeup Brand & #1 Amazon Best-Seller", quote: "I've been working with Lawrence over the last 6 months on Facebook ads, video scripts, and USPs for our 7-figure brand. Based on his work, I also asked him to help with our SaaS. He's very professional, of great help, and a great guy to work with. I would highly recommend Lawrence as a copywriter." },
+    { name: "David N.", title: "Founder, Marketer, Wellness Coach & Optometrist", quote: "Reliable, honest, and a great listener. His gift with words effortlessly establishes immediate trust with readers. I can't thank him enough for creating amazing copy for my digital marketing agency's website. Look no further for a great content producer — and just as importantly, a 'top bloke' to work with." },
+    { name: "Thore Hauthal", title: "Mentor & Co-Owner — 8-figure & 4X Two Comma Club Member (Justin Woll & Thore Hauthal)", quote: "Lawrence helped in multiple areas of copy. Through his deep understanding of market psychology, he improved our long-established sales copy and delivered emails focused on both conversion and brand awareness. He's a gifted writer, always brings his best effort, and goes beyond what's asked. I can only recommend Lawrence to anyone looking for an experienced writer." },
+    { name: "Isak M.", title: "Founder & Email Marketer, ISAMO Consulting", quote: "Lawrence is the only one I hired early and decided to keep — because of his dedication and ability to work with a team. His email copywriting engages leads on a whole new level, and the subject lines are really killing it. If you're thinking about hiring Lawrence, stop thinking and just do it. You will not regret it." },
+    { name: "\"Iggy\" O.", title: "Founder, Marketer & Fit Pro, Tri-Fit Training", quote: "Lawrence bangs out some pretty sweet copy I use for paid traffic and campaigns. I fill out the avatar, give him the angle, and he delivers fast. If you don't like writing and you value your time — he's the man to do it. He does a fantastic job. Check him out, he's definitely worth it." },
+    { name: "Matt L.", title: "Serial Entrepreneur & Marketer — 9-figure/yr Earner (Matt Lloyd)", quote: "His approach from the start was unlike any other copywriter I've worked with over 15 years. He asked deep questions about the audience and what drove them. When I got the first draft back, I could see the difference it made. Lawrence wrote copy matched to what prospects wanted at a deep emotional level. With most copywriters you get cookie-cutter copy. With Lawrence, you get highly effective, on-target copy that actually works." },
+    { name: "Chris C.", title: "Operations Manager & Co-founder, Seed Omega (SaaS Crowdfunding)", quote: "I appreciate the copies you've provided for my company write-up. Truly remarkable work and very professional content editing. Will definitely come back if I need any more editing or writing!" },
   ];
 
   return (
     <section id="testimonials" className="py-40 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="mb-32 text-center">
-          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-xs mb-6 block">The Proof</span>
+          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Proof</span>
           <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Market Validation</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
