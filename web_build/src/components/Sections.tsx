@@ -4,8 +4,8 @@ import { ArrowRight, Zap, Target, Layers, BarChart3, MessageSquare, Quote, Chevr
 
 const Logo = () => (
   <div className="flex items-center gap-3 group cursor-pointer">
-    <img src="/logo.svg" alt="Drivenlytics" className="h-10 w-auto" />
-    <span className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-white italic">
+    <img src="/logo.svg" alt="Drivenlytics" className="h-7 md:h-10 w-auto" />
+    <span className="hidden md:inline text-xl md:text-4xl font-black tracking-tighter uppercase text-white italic">
       DRIVENLYTICS
     </span>
   </div>
@@ -14,7 +14,7 @@ const Logo = () => (
 export const Navbar = () => (
   <nav className="sticky top-0 z-50 px-6 py-4">
     <div className="max-w-7xl mx-auto">
-      <div className="brand-bar-border w-full p-6 md:p-8 flex items-center justify-between bg-black/80 backdrop-blur-xl">
+      <div className="brand-bar-border w-full p-4 md:p-8 flex items-center justify-between bg-black/80 backdrop-blur-xl">
         <div className="flex items-center gap-12">
           <Logo />
           <div className="hidden lg:flex items-center gap-12">
@@ -23,16 +23,27 @@ export const Navbar = () => (
             <a href="#testimonials" className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Results</a>
           </div>
         </div>
-        <a href="mailto:hello@drivenlytics.com" className="px-8 py-3.5 bg-white text-black text-[20px] font-black uppercase tracking-[0.2em] rounded-full transition-all duration-500 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
+        <a href="mailto:hello@drivenlytics.com" className="hidden md:block px-8 py-3.5 bg-white text-black text-[20px] font-black uppercase tracking-[0.2em] rounded-full transition-all duration-500 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
           Start
         </a>
+        <div className="md:hidden flex items-center gap-4">
+          <span className="text-[20px] font-black tracking-tighter uppercase text-white italic">DRIVENLYTICS</span>
+          <a href="mailto:hello@drivenlytics.com" className="px-3 py-1.5 bg-white text-black text-[9px] font-black uppercase tracking-[0.2em] rounded-full ring-1 ring-brand-purple/60 shadow-[0_0_20px_rgba(139,92,246,0.7),_12px_0_20px_rgba(139,92,246,0.3),_-12px_0_20px_rgba(139,92,246,0.3)]">
+            Start
+          </a>
+        </div>
+        <button className="md:hidden flex flex-col gap-[5px] p-1 ml-3" aria-label="Menu">
+          <span className="w-5 h-[2px] bg-white block" />
+          <span className="w-5 h-[2px] bg-white block" />
+          <span className="w-5 h-[2px] bg-white block" />
+        </button>
       </div>
     </div>
   </nav>
 );
 
 export const Hero = () => (
-  <section className="relative pt-12 pb-0 px-6 flex flex-col items-center overflow-hidden">
+  <section className="relative pt-6 pb-0 px-6 flex flex-col items-center overflow-hidden">
     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/20 blur-[180px] rounded-full -z-10 animate-pulse" />
     <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-blue/10 blur-[180px] rounded-full -z-10" />
 
@@ -48,18 +59,18 @@ export const Hero = () => (
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-brand-purple text-[20px] font-black uppercase tracking-[0.4em] mb-12"
+            className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-brand-purple text-[11px] md:text-[20px] font-black uppercase tracking-[0.4em] mb-12"
           >
             <Sparkles className="w-4 h-4" />
             The Analytical Alchemist
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 leading-[0.85] uppercase italic text-white flex items-center justify-center gap-6">
+          <h1 className="text-[11vw] md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 leading-[0.85] uppercase italic text-white flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6">
             <img src="/logo.svg" alt="" className="h-[1.4em] w-auto" />
             DRIVENLYTICS
           </h1>
 
-          <p className="text-xl md:text-3xl text-gray-400 max-w-3xl ml-[255px] leading-tight font-medium text-center">
+          <p className="text-xl md:text-3xl text-gray-400 max-w-3xl mx-auto md:ml-[255px] leading-tight font-medium text-center">
             Data-Driven Performance Marketing Solutions
           </p>
         </div>
@@ -72,7 +83,7 @@ export const Hero = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
-        className="flex flex-col items-center gap-10"
+        className="flex flex-col items-center gap-5 md:gap-10"
       >
         <button className="group relative px-14 py-6 bg-white text-black font-black text-[24px] uppercase tracking-widest rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
           <span className="relative z-10 flex items-center gap-5">
@@ -80,7 +91,7 @@ export const Hero = () => (
           </span>
         </button>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col-reverse items-center gap-4">
           <div className="flex -space-x-4">
             {[1, 2, 3, 4, 5].map((i) => (
               <div key={i} className="w-12 h-12 rounded-full border-4 border-black bg-gray-900 overflow-hidden ring-1 ring-white/10">
@@ -88,7 +99,7 @@ export const Hero = () => (
               </div>
             ))}
           </div>
-          <span className="text-gray-500 text-[30px] font-black uppercase tracking-[0.3em]">Trusted by 7–9 figure market leaders</span>
+          <span className="text-white text-[13px] md:text-[26px] font-black uppercase tracking-[0.3em] text-center">Lawrence is Trusted<br /> by 9-7 figure market leaders</span>
         </div>
       </motion.div>
     </div>
@@ -132,11 +143,11 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-40 px-6 bg-black">
+    <section id="services" className="pt-20 pb-20 md:py-40 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="mb-32 text-center md:text-left">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Arsenal</span>
-          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Creative Strategic <br />Breakthroughs</h2>
+          <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Creative Strategic Breakthroughs</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
@@ -197,9 +208,9 @@ export const Process = () => {
   ];
 
   return (
-    <section id="process" className="py-40 px-6 bg-black relative overflow-hidden">
+    <section id="process" className="pt-20 pb-20 md:py-40 px-6 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-32 text-center">
+        <div className="mb-16 md:mb-32 text-center">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Methodology</span>
           <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none [word-spacing:1rem]">Analytical Alchemy</h2>
         </div>
@@ -251,9 +262,9 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="pt-[60px] pb-20 px-6 bg-black">
+    <section id="testimonials" className="pt-[60px] pb-10 md:pb-20 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-32 text-center">
+        <div className="mb-16 md:mb-32 text-center">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Proof</span>
           <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Market Validation</h2>
         </div>
@@ -265,13 +276,13 @@ export const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white/[0.03] p-16 rounded-[3rem] border border-white/5 flex flex-col hover:bg-white/[0.06] transition-all duration-700 group"
+              className="bg-white/[0.03] p-8 md:p-16 rounded-[3rem] border border-white/5 flex flex-col hover:bg-white/[0.06] transition-all duration-700 group"
             >
               <Quote className="w-12 h-12 text-brand-purple mb-10 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
-              <p className="text-2xl text-gray-200 font-bold mb-16 flex-grow leading-tight italic">"{t.quote}"</p>
+              <p className="text-base md:text-2xl text-gray-200 font-bold mb-10 md:mb-16 flex-grow leading-tight italic">"{t.quote}"</p>
               <div>
                 <div className="text-xl font-black uppercase tracking-tight text-white">{t.name}</div>
-                <div className="text-[20px] text-brand-purple font-black uppercase tracking-[0.3em] mt-3">{t.title}</div>
+                <div className="text-[11px] md:text-[20px] text-brand-purple font-black uppercase tracking-[0.3em] mt-3">{t.title}</div>
               </div>
             </motion.div>
           ))}
@@ -282,23 +293,23 @@ export const Testimonials = () => {
 };
 
 export const Contact = () => (
-  <section className="py-24 px-6 relative overflow-hidden">
+  <section className="py-12 md:py-24 px-6 relative overflow-hidden">
     <div className="max-w-6xl mx-auto text-center relative z-10">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="hero-gradient-border p-20 md:p-32"
+        className="hero-gradient-border p-8 md:p-32"
       >
-        <h2 className="text-6xl md:text-9xl font-black tracking-tighter mb-16 uppercase italic text-white leading-[0.8]">
+        <h2 className="text-4xl md:text-9xl font-black tracking-tighter mb-8 md:mb-16 uppercase italic text-white leading-[0.8]">
           Ready to<br />Dominate?
         </h2>
-        <p className="text-2xl md:text-4xl text-gray-400 mb-20 font-bold uppercase tracking-tight max-w-2xl mx-auto">
+        <p className="text-lg md:text-4xl text-gray-400 mb-10 md:mb-20 font-bold uppercase tracking-tight max-w-2xl mx-auto">
           Ready to conquer your market?<br />Let's build your breakthrough.
         </p>
         <a
           href="mailto:hello@drivenlytics.com"
-          className="inline-flex items-center gap-6 px-16 py-8 bg-white text-black font-black text-2xl uppercase tracking-widest rounded-full hover:bg-brand-purple hover:text-white transition-all shadow-[0_0_60px_-15px_rgba(255,255,255,0.4)]"
+          className="inline-flex items-center gap-4 md:gap-6 px-8 py-4 md:px-16 md:py-8 bg-white text-black font-black text-base md:text-2xl uppercase tracking-widest rounded-full hover:bg-brand-purple hover:text-white transition-all shadow-[0_0_60px_-15px_rgba(255,255,255,0.4)]"
         >
           Schedule a call <MessageSquare className="w-10 h-10" />
         </a>
@@ -309,9 +320,9 @@ export const Contact = () => (
 );
 
 export const Footer = () => (
-  <footer className="py-32 px-6 bg-black border-t border-white/5">
+  <footer className="py-16 md:py-32 px-6 bg-black border-t border-white/5">
     <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row items-start justify-between gap-24 mb-32">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-12 md:gap-24 mb-16 md:mb-32">
         <div className="max-w-md">
           <Logo />
           <p className="text-gray-500 mt-10 text-xl font-medium leading-tight">
