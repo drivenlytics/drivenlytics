@@ -153,7 +153,7 @@ export const Services = () => {
               </div>
               <h3 className="text-2xl font-black uppercase tracking-tight mb-4 leading-tight">{s.title}</h3>
               <div className="mb-8 flex flex-col gap-1">
-                <span className="text-4xl font-black text-white">{s.price}</span>
+                <span className="text-3xl font-black text-white break-words">{s.price}</span>
                 <span className="text-gray-600 text-[10px] font-black uppercase tracking-widest">{s.type}</span>
               </div>
               <p className="text-gray-400 text-base leading-relaxed mb-12 flex-grow font-medium">{s.desc}</p>
@@ -251,7 +251,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-40 px-6 bg-black">
+    <section id="testimonials" className="pt-[60px] pb-40 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="mb-32 text-center">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Proof</span>
