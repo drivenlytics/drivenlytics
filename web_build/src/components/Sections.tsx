@@ -4,7 +4,7 @@ import { ArrowRight, Zap, Target, Layers, BarChart3, MessageSquare, Quote, Chevr
 
 const Logo = () => (
   <div className="flex items-center gap-3 group cursor-pointer">
-    <img src="/src/assets/logo.svg" alt="Drivenlytics" className="h-10 w-auto" />
+    <img src="/logo.svg" alt="Drivenlytics" className="h-10 w-auto" />
     <span className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-white italic">
       DRIVENLYTICS
     </span>
@@ -55,7 +55,7 @@ export const Hero = () => (
           </motion.div>
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 leading-[0.85] uppercase italic text-white flex items-center justify-center gap-6">
-            <img src="/src/assets/logo.svg" alt="" className="h-[1em] w-auto" />
+            <img src="/logo.svg" alt="" className="h-[1em] w-auto" />
             DRIVENLYTICS
           </h1>
 
