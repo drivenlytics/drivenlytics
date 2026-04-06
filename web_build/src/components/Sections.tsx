@@ -251,7 +251,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="pt-[60px] pb-40 px-6 bg-black">
+    <section id="testimonials" className="pt-[60px] pb-20 px-6 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="mb-32 text-center">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Proof</span>
@@ -271,7 +271,7 @@ export const Testimonials = () => {
               <p className="text-2xl text-gray-200 font-bold mb-16 flex-grow leading-tight italic">"{t.quote}"</p>
               <div>
                 <div className="text-xl font-black uppercase tracking-tight text-white">{t.name}</div>
-                <div className="text-[10px] text-brand-purple font-black uppercase tracking-[0.3em] mt-3">{t.title}</div>
+                <div className="text-[20px] text-brand-purple font-black uppercase tracking-[0.3em] mt-3">{t.title}</div>
               </div>
             </motion.div>
           ))}
@@ -282,7 +282,7 @@ export const Testimonials = () => {
 };
 
 export const Contact = () => (
-  <section className="py-48 px-6 relative overflow-hidden">
+  <section className="py-24 px-6 relative overflow-hidden">
     <div className="max-w-6xl mx-auto text-center relative z-10">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
