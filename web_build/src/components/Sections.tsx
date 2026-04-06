@@ -55,6 +55,7 @@ export const Hero = () => (
         className="hero-gradient-border w-full px-12 py-6 md:px-24 md:py-10 relative overflow-hidden mb-0"
       >
         <div className="relative z-10 text-center">
+          <div className="hidden md:block h-16" />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -336,7 +337,7 @@ export const Footer = () => (
         <div className="max-w-md">
           <Logo />
           <p className="text-gray-500 mt-10 text-xl font-medium leading-tight">
-            Transmuting raw data and market intelligence into high-converting reality.
+            Helping entrepreneurs strengthen their brand, build trust, and increase conversions.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-16">
