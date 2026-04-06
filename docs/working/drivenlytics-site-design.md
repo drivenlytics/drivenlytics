@@ -24,6 +24,8 @@ Sites pulled from godly.website — visual references only, not competitors.
 **One-line description:**
 We help brands increase their revenue by providing high-quality, data-driven solutions and recommendations to attract and convert their ideal customers. DATA-DRIVEN SOLUTIONS THAT CONVERT.
 
+- DATA-DRIVEN PERFORMANCE MARKETING SOLUTIONS
+
 **Target audience:**
 Brands that want to increase their revenue through high-quality, data-driven solutions and conversions.
 
@@ -77,7 +79,8 @@ SECTIONS TO BUILD
    - Clean, minimal
 
 2. HERO
-   - Leave headline and subheadline blank (placeholder only — copy TBD)
+   - [LOGO] DRIVENLYTICS
+   - SUBHEADLINES: DATA-DRIVEN PERFORMANCE MARKETING SOLUTIONS
    - Single bold CTA button: "Get Started"
 
 3. SERVICES — 4 cards in a grid

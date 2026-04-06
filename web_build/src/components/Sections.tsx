@@ -1,15 +1,13 @@
 import { motion } from "motion/react";
 import { ArrowRight, Zap, Target, Layers, BarChart3, MessageSquare, Quote, ChevronRight, Sparkles } from "lucide-react";
 
+
 const Logo = () => (
-  <div className="flex items-center gap-4 group cursor-pointer">
+  <div className="flex items-center gap-3 group cursor-pointer">
+    <img src="/src/assets/logo.svg" alt="Drivenlytics" className="h-10 w-auto" />
     <span className="text-3xl md:text-4xl font-black tracking-tighter uppercase text-white italic">
       DRIVENLYTICS
     </span>
-    <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl bg-black border border-white/20 shadow-[0_0_30px_-10px_rgba(255,255,255,0.2)]">
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-pink via-brand-purple to-brand-blue opacity-0 group-hover:opacity-30 transition-opacity duration-700" />
-      <Zap className="w-7 h-7 text-white relative z-10 group-hover:scale-110 transition-transform duration-500" />
-    </div>
   </div>
 );
 
@@ -56,12 +54,13 @@ export const Hero = () => (
             The Analytical Alchemist
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 leading-[0.85] uppercase italic text-white">
-            [HEADLINE <br />PLACEHOLDER]
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 leading-[0.85] uppercase italic text-white flex items-center justify-center gap-6">
+            <img src="/src/assets/logo.svg" alt="" className="h-[1em] w-auto" />
+            DRIVENLYTICS
           </h1>
 
-          <p className="text-xl md:text-3xl text-gray-400 max-w-3xl mx-auto leading-tight font-medium">
-            [SUBHEADLINE PLACEHOLDER]
+          <p className="text-xl md:text-3xl text-gray-400 max-w-3xl mx-auto leading-tight font-medium text-center">
+            Data-Driven Performance Marketing Solutions
           </p>
         </div>
 
