@@ -223,8 +223,8 @@ export const Process = () => {
     <section id="process" className="pt-20 pb-20 md:py-40 px-6 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16 md:mb-32 text-center">
-          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Methodology</span>
-          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none [word-spacing:1rem]">Analytical Alchemy</h2>
+          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[22px] md:text-[30px] mb-6 block">The Methodology</span>
+          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center md:text-left [word-spacing:1rem]">Analytical Alchemy</h2>
         </div>
         <div className="space-y-12">
           {phases.map((p, i) => (
@@ -278,7 +278,7 @@ export const Testimonials = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-32 text-center">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Proof</span>
-          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Market Validation</h2>
+          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center">Market Validation</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
