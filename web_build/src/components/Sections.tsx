@@ -18,9 +18,9 @@ export const Navbar = () => (
         <div className="flex items-center gap-12">
           <Logo />
           <div className="hidden lg:flex items-center gap-12">
-            <a href="#services" className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Services</a>
-            <a href="#process" className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Process</a>
-            <a href="#testimonials" className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Results</a>
+            <a href="#services" className="text-base font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Services</a>
+            <a href="#process" className="text-base font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Process</a>
+            <a href="#testimonials" className="text-base font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Results</a>
           </div>
         </div>
         <a href="mailto:hello@drivenlytics.com" className="hidden md:block px-8 py-3.5 bg-white text-black text-[20px] font-black uppercase tracking-[0.2em] rounded-full transition-all duration-500 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
@@ -43,7 +43,7 @@ export const Navbar = () => (
 );
 
 export const Hero = () => (
-  <section className="relative pt-6 pb-0 px-6 flex flex-col items-center overflow-hidden">
+  <section className="relative pt-0 pb-0 px-6 flex flex-col items-center overflow-hidden">
     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/20 blur-[180px] rounded-full -z-10 animate-pulse" />
     <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-blue/10 blur-[180px] rounded-full -z-10" />
 
@@ -52,7 +52,7 @@ export const Hero = () => (
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="hero-gradient-border w-full p-12 md:p-24 relative overflow-hidden mb-0"
+        className="hero-gradient-border w-full px-12 py-6 md:px-24 md:py-10 relative overflow-hidden mb-0"
       >
         <div className="relative z-10 text-center">
           <motion.div
@@ -79,6 +79,8 @@ export const Hero = () => (
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-blue/10 blur-[100px] -z-10" />
       </motion.div>
 
+      <div className="h-8 md:h-16" />
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -92,14 +94,23 @@ export const Hero = () => (
         </button>
 
         <div className="flex flex-col-reverse items-center gap-4">
-          <div className="flex -space-x-4">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-12 h-12 rounded-full border-4 border-black bg-gray-900 overflow-hidden ring-1 ring-white/10">
-                <img src={`https://picsum.photos/seed/agency${i}/100/100`} alt="Client" referrerPolicy="no-referrer" />
+          <a href="#testimonials" className="flex -space-x-4">
+            {[
+              { letter: "M", bg: "#6D28D9" },
+              { letter: "T", bg: "#7C3AED" },
+              { letter: "Y", bg: "#8B5CF6" },
+              { letter: "J", bg: "#9333EA" },
+              { letter: "I", bg: "#A855F7" },
+              { letter: "I", bg: "#7E22CE" },
+              { letter: "D", bg: "#8B5CF6" },
+              { letter: "C", bg: "#6D28D9" },
+            ].map((a, i) => (
+              <div key={i} className="w-12 h-12 rounded-full border border-brand-purple bg-black flex items-center justify-center shrink-0">
+                <span className="text-white font-black text-base">{a.letter}</span>
               </div>
             ))}
-          </div>
-          <span className="text-white text-[13px] md:text-[26px] font-black uppercase tracking-[0.3em] text-center">Lawrence is Trusted<br /> by 9-7 figure market leaders</span>
+          </a>
+          <span className="text-white text-[13px] md:text-[26px] font-black uppercase tracking-[0.3em] text-center">Lawrence is Trusted by<br />Multiple <span className="normal-case tracking-wide">9-to-7</span> Figure Earners</span>
         </div>
       </motion.div>
     </div>
@@ -187,22 +198,22 @@ export const Process = () => {
     {
       step: "PHASE 01",
       title: "Research & Strategy",
-      desc: "Deep intelligence gathering to find the hidden leverage points in your market.",
-      items: ["Unique market research", "Competitor analysis", "Proprietary avatar creation", "Market awareness assessment", "Psychological pattern analysis"],
+      desc: "Deep intelligence using all technical platforms available to amalgamate, analyze, and understand.",
+      items: ["Proprietary Market Research", "Competitive Market Analysis", "Avatar & Motivations", "Strategic Market Positioning", "Psychological Analysis"],
       color: "from-brand-pink to-brand-purple"
     },
     {
       step: "PHASE 02",
-      title: "Creative & Persuasion",
-      desc: "Transmuting data into a compelling narrative that bypasses skepticism.",
-      items: ["Big idea generation", "Branding and storytelling", "USP development", "NLP strategies", "Psychological persuasion"],
+      title: "Creatives & Persuasion",
+      desc: "Creatively build 0 - 1 out of the box solutions that build trust and increase conversions.",
+      items: ["Brand Positioning", "Character Positioning", "Personality & Motivation Alignment", "Story, Narrative, Voice", "Persuasion & NLP Strategies", "Brand Building 0 - 1", "Design for Branding", "Layout, UI/UX", "Logos", "Sales Copy and Site Design", "SEO that Ranks in 2026"],
       color: "from-brand-purple to-brand-blue"
     },
     {
       step: "PHASE 03",
       title: "Execution",
       desc: "Precision deployment of assets designed for maximum conversion velocity.",
-      items: ["Design with pattern interrupts", "Lead creation systems", "CTA optimisation", "Offer development", "Visual design"],
+      items: ["Strategizing & Implementing", "Backend/Tech Frameworks", "Planning", "Executing"],
       color: "from-brand-blue to-brand-pink"
     }
   ];
@@ -236,7 +247,7 @@ export const Process = () => {
                   {p.items.map((item, idx) => (
                     <div key={idx} className="flex items-center gap-4 group/item">
                       <div className="w-3 h-3 bg-brand-purple rounded-full shrink-0 group-hover/item:scale-150 transition-transform shadow-[0_0_15px_rgba(139,92,246,0.5)]" />
-                      <span className="text-xs font-black uppercase tracking-widest text-gray-300">{item}</span>
+                      <span className="text-sm md:text-base font-black uppercase tracking-widest text-gray-300">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -251,14 +262,14 @@ export const Process = () => {
 
 export const Testimonials = () => {
   const testimonials = [
-    { name: "Benson Chidester", title: "COO, Marketer, Coach — 8-figure Earner & 4X Two Comma Club Member (Tanner Chidester)", quote: "If there's one word to describe Lawrence — he over delivers. He's thorough, dedicated, makes sure he has all the correct information to make the copy as beneficial as possible. If you're looking for a copywriter who's detailed, gets the job done on time, and is willing to do whatever it takes — Lawrence is definitely your guy." },
-    { name: "Yasir M.", title: "Founder, Lovoir — 7-figure Makeup Brand & #1 Amazon Best-Seller", quote: "I've been working with Lawrence over the last 6 months on Facebook ads, video scripts, and USPs for our 7-figure brand. Based on his work, I also asked him to help with our SaaS. He's very professional, of great help, and a great guy to work with. I would highly recommend Lawrence as a copywriter." },
-    { name: "David N.", title: "Founder, Marketer, Wellness Coach & Optometrist", quote: "Reliable, honest, and a great listener. His gift with words effortlessly establishes immediate trust with readers. I can't thank him enough for creating amazing copy for my digital marketing agency's website. Look no further for a great content producer — and just as importantly, a 'top bloke' to work with." },
-    { name: "Thore Hauthal", title: "Mentor & Co-Owner — 8-figure & 4X Two Comma Club Member (Justin Woll & Thore Hauthal)", quote: "Lawrence helped in multiple areas of copy. Through his deep understanding of market psychology, he improved our long-established sales copy and delivered emails focused on both conversion and brand awareness. He's a gifted writer, always brings his best effort, and goes beyond what's asked. I can only recommend Lawrence to anyone looking for an experienced writer." },
-    { name: "Isak M.", title: "Founder & Email Marketer, ISAMO Consulting", quote: "Lawrence is the only one I hired early and decided to keep — because of his dedication and ability to work with a team. His email copywriting engages leads on a whole new level, and the subject lines are really killing it. If you're thinking about hiring Lawrence, stop thinking and just do it. You will not regret it." },
-    { name: "\"Iggy\" O.", title: "Founder, Marketer & Fit Pro, Tri-Fit Training", quote: "Lawrence bangs out some pretty sweet copy I use for paid traffic and campaigns. I fill out the avatar, give him the angle, and he delivers fast. If you don't like writing and you value your time — he's the man to do it. He does a fantastic job. Check him out, he's definitely worth it." },
-    { name: "Matt L.", title: "Serial Entrepreneur & Marketer — 9-figure/yr Earner (Matt Lloyd)", quote: "His approach from the start was unlike any other copywriter I've worked with over 15 years. He asked deep questions about the audience and what drove them. When I got the first draft back, I could see the difference it made. Lawrence wrote copy matched to what prospects wanted at a deep emotional level. With most copywriters you get cookie-cutter copy. With Lawrence, you get highly effective, on-target copy that actually works." },
-    { name: "Chris C.", title: "Operations Manager & Co-founder, Seed Omega (SaaS Crowdfunding)", quote: "I appreciate the copies you've provided for my company write-up. Truly remarkable work and very professional content editing. Will definitely come back if I need any more editing or writing!" },
+    { name: "Matt Lloyd", title: "9-figure/yr Earner — Matt Lloyd, Previously Largest Affiliate Marketer", quote: "His approach from the start was unlike any other copywriter I've worked with over 15 years. He asked deep questions about the audience and what drove them. When I got the first draft back, I could see the difference it made. Lawrence wrote copy matched to what prospects wanted at a deep emotional level. With most copywriters you get cookie-cutter copy. With Lawrence, you get highly effective, on-target copy that actually works." },
+    { name: "Tanner Chidester", title: "8-figure Earner & 4X Two Comma Club Member — Tanner Chidester", quote: "If there's one word to describe Lawrence — he over delivers. He's thorough, dedicated, makes sure he has all the correct information to make the copy as beneficial as possible. If you're looking for a copywriter who's detailed, gets the job done on time, and is willing to do whatever it takes — Lawrence is definitely your guy." },
+    { name: "Yasir M.", title: "7-figure Makeup Brand & #1 Amazon Best-Seller", quote: "I've been working with Lawrence over the last 6 months on Facebook ads, video scripts, and USPs for our 7-figure brand. Based on his work, I also asked him to help with our SaaS. He's very professional, of great help, and a great guy to work with. I would highly recommend Lawrence as a copywriter." },
+    { name: "Justin Woll & Thore Hauthal", title: "8-figure & 4X Two Comma Club Member — Justin Woll & Thore Hauthal", quote: "Lawrence helped in multiple areas of copy. Through his deep understanding of market psychology, he improved our long-established sales copy and delivered emails focused on both conversion and brand awareness. He's a gifted writer, always brings his best effort, and goes beyond what's asked. I can only recommend Lawrence to anyone looking for an experienced writer." },
+    { name: "Isak M.", title: "ISAMO Consulting — Isak M., Founder & Email Marketer", quote: "Lawrence is the only one I hired early and decided to keep — because of his dedication and ability to work with a team. His email copywriting engages leads on a whole new level, and the subject lines are really killing it. If you're thinking about hiring Lawrence, stop thinking and just do it. You will not regret it." },
+    { name: "\"Iggy\" O.", title: "Tri-Fit Training — \"Iggy\" O., Founder, Marketer, & Fit Pro", quote: "Lawrence bangs out some pretty sweet copy I use for paid traffic and campaigns. I fill out the avatar, give him the angle, and he delivers fast. If you don't like writing and you value your time — he's the man to do it. He does a fantastic job. Check him out, he's definitely worth it." },
+    { name: "David N.", title: "Marketer 4 Wellness — David N., Founder, Marketer, Wellness Coach, Optometrist", quote: "Reliable, honest, and a great listener. His gift with words effortlessly establishes immediate trust with readers. I can't thank him enough for creating amazing copy for my digital marketing agency's website. Look no further for a great content producer — and just as importantly, a 'top bloke' to work with." },
+    { name: "Chris C.", title: "Seed Omega — Chris C., Operations Manager (Singapore) & Co-founder of Seed Omega", quote: "I appreciate the copies you've provided for my company write-up. Truly remarkable work and very professional content editing. Will definitely come back if I need any more editing or writing!" },
   ];
 
   return (
@@ -281,8 +292,7 @@ export const Testimonials = () => {
               <Quote className="w-12 h-12 text-brand-purple mb-10 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
               <p className="text-base md:text-2xl text-gray-200 font-bold mb-10 md:mb-16 flex-grow leading-tight italic">"{t.quote}"</p>
               <div>
-                <div className="text-xl font-black uppercase tracking-tight text-white">{t.name}</div>
-                <div className="text-[11px] md:text-[20px] text-brand-purple font-black uppercase tracking-[0.3em] mt-3">{t.title}</div>
+                <div className="text-[11px] md:text-[20px] text-brand-purple font-black uppercase tracking-[0.3em]">{t.title}</div>
               </div>
             </motion.div>
           ))}
@@ -331,24 +341,24 @@ export const Footer = () => (
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-16">
           <div>
-            <h4 className="text-white font-black uppercase tracking-[0.4em] text-[10px] mb-10">Navigation</h4>
+            <h4 className="text-white font-black uppercase tracking-[0.4em] text-sm mb-10">Navigation</h4>
             <ul className="space-y-6">
-              <li><a href="#" className="text-gray-500 hover:text-white transition-colors text-xs font-black uppercase tracking-widest">Home</a></li>
-              <li><a href="#services" className="text-gray-500 hover:text-white transition-colors text-xs font-black uppercase tracking-widest">Services</a></li>
-              <li><a href="#process" className="text-gray-500 hover:text-white transition-colors text-xs font-black uppercase tracking-widest">Process</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-white transition-colors text-sm font-black uppercase tracking-widest">Home</a></li>
+              <li><a href="#services" className="text-gray-500 hover:text-white transition-colors text-sm font-black uppercase tracking-widest">Services</a></li>
+              <li><a href="#process" className="text-gray-500 hover:text-white transition-colors text-sm font-black uppercase tracking-widest">Process</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-black uppercase tracking-[0.4em] text-[10px] mb-10">Legal</h4>
+            <h4 className="text-white font-black uppercase tracking-[0.4em] text-sm mb-10">Legal</h4>
             <ul className="space-y-6">
-              <li><a href="#" className="text-gray-500 hover:text-white transition-colors text-xs font-black uppercase tracking-widest">Privacy</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-white transition-colors text-xs font-black uppercase tracking-widest">Terms</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-white transition-colors text-sm font-black uppercase tracking-widest">Privacy</a></li>
+              <li><a href="#" className="text-gray-500 hover:text-white transition-colors text-sm font-black uppercase tracking-widest">Terms</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-black uppercase tracking-[0.4em] text-[10px] mb-10">Connect</h4>
+            <h4 className="text-white font-black uppercase tracking-[0.4em] text-sm mb-10">Connect</h4>
             <ul className="space-y-6">
-              <li><a href="mailto:hello@drivenlytics.com" className="text-gray-500 hover:text-white transition-colors text-xs font-black uppercase tracking-widest">Email</a></li>
+              <li><a href="mailto:hello@drivenlytics.com" className="text-gray-500 hover:text-white transition-colors text-sm font-black uppercase tracking-widest">Email</a></li>
             </ul>
           </div>
         </div>
