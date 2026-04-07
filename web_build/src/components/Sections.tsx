@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Zap, Target, Layers, BarChart3, MessageSquare, Quote, ChevronRight, Sparkles } from "lucide-react";
+import { ArrowRight, Zap, Target, MessageSquare, Quote, ChevronRight, Sparkles } from "lucide-react";
 
 
 const Logo = () => (
@@ -111,11 +111,30 @@ export const Hero = () => (
               </div>
             ))}
           </a>
-          <span className="text-white text-[13px] md:text-[26px] font-black uppercase tracking-[0.3em] text-center">Lawrence is Trusted by<br />Multiple <span className="normal-case tracking-wide">9-to-7</span> Figure Earners</span>
+          <span className="text-white text-[13px] md:text-[26px] font-black uppercase tracking-[0.3em] text-center">Lawrence is Trusted by<br /><span className="normal-case tracking-wide">9–7</span> Figure Market Leaders</span>
         </div>
       </motion.div>
     </div>
   </section>
+);
+
+const IncreasingBarsIcon = () => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="22" width="10" height="16" rx="2" fill="currentColor" opacity="0.6" />
+    <rect x="15" y="14" width="10" height="24" rx="2" fill="currentColor" opacity="0.8" />
+    <rect x="28" y="4" width="10" height="34" rx="2" fill="currentColor" />
+  </svg>
+);
+
+const FullStackIcon = () => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="2" width="36" height="10" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+    <rect x="2" y="15" width="36" height="10" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+    <rect x="2" y="28" width="36" height="10" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+    <circle cx="33" cy="7" r="2" fill="currentColor" />
+    <circle cx="33" cy="20" r="2" fill="currentColor" />
+    <circle cx="33" cy="33" r="2" fill="currentColor" />
+  </svg>
 );
 
 export const Services = () => {
@@ -124,33 +143,73 @@ export const Services = () => {
       title: "Launch Ready",
       price: "$1,000",
       type: "one-time",
-      desc: "Landing page + lead form + 5-email welcome sequence",
-      delivery: "5–7 business days",
+      desc: [
+        "Tailored Custom landing page",
+        "Custom sales copy",
+        "All designs + layout",
+        "Lead form",
+        "5 custom email drip sequence",
+      ],
+      subdesc: "Fully customized for your target audience.",
+      delivery: "7 Business Days",
       icon: <Zap className="w-10 h-10" />
     },
     {
       title: "Brand Foundation Kit",
       price: "$3,000–$5,000",
       type: "one-time",
-      desc: "ICP, value proposition, brand positioning, voice guidelines, visual identity, core messaging",
-      delivery: "Custom timeline",
+      desc: [
+        "0–1 Framework",
+        "Brand Market Research",
+        "Identifying ICP to Value Proposition",
+        "Competitive brand positioning",
+        "Voice & tone guidelines",
+        "Brand style palette",
+        "Brand identity building",
+        "Core messaging",
+        "Alignment + Consistency",
+      ],
+      subdesc: "",
+      delivery: "Custom Timeline",
       icon: <Target className="w-10 h-10" />
     },
     {
       title: "Content Retainer",
       price: "$1,000/mo.",
       type: " ",
-      desc: "4 SEO blog posts OR 1 email sequence OR 8 social posts + strategy",
+      desc: [
+        "4 Unique SEO blog content posts",
+        "With images",
+        "Proprietary SEO high-ranking system [High Google Signal]",
+        "On-page SEO + Schema markup",
+        "Designed for your Pillar-Cluster system",
+      ],
+      subdesc: "",
       delivery: "Ongoing",
-      icon: <Layers className="w-10 h-10" />
+      icon: <IncreasingBarsIcon />
     },
     {
       title: "Custom / Full-Stack",
       price: "$5,000+/mo.",
       type: "",
-      desc: "Site builds, funnels, email infrastructure, ads, tracking, AI automation",
-      delivery: "Strategic partnership",
-      icon: <BarChart3 className="w-10 h-10" />
+      desc: [
+        "Full-site builds, WP, React, Vite, Next",
+        "Brand Design 0–1 builds",
+        "Logo/UI/UX",
+        "Strategic funnels",
+        "Developer Email Setup",
+        "Email Management",
+        "Email Content/Drip Campaigns",
+        "Content Building & Management",
+        "Ads Copy",
+        "High-performance marketing",
+        "AI & Automation curated systems",
+        "Full web dev build & management",
+        "Plus more...",
+      ],
+      subdesc: "",
+      delivery: "Strategic Partnership",
+      icon: <FullStackIcon />
     }
   ];
 
@@ -179,9 +238,17 @@ export const Services = () => {
                 <span className="text-3xl font-black text-white break-words">{s.price}</span>
                 <span className="text-gray-600 text-[10px] font-black uppercase tracking-widest">{s.type}</span>
               </div>
-              <p className="text-gray-400 text-base leading-relaxed mb-12 flex-grow font-medium">{s.desc}</p>
+              <ul className="text-gray-400 text-sm leading-relaxed mb-4 flex-grow font-medium space-y-1.5">
+                {s.desc.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-brand-purple mt-1 shrink-0">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              {s.subdesc && <p className="text-gray-500 text-xs font-medium italic mb-8">{s.subdesc}</p>}
               <div className="pt-8 border-t border-white/5 flex items-center justify-between">
-                <span className="text-[10px] font-black text-brand-purple uppercase tracking-[0.3em]">{s.delivery}</span>
+                <span className="text-[13px] font-black text-brand-purple uppercase tracking-[0.2em]">{s.delivery}</span>
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-brand-purple transition-colors duration-500">
                   <ChevronRight className="w-5 h-5 text-white" />
                 </div>
@@ -200,7 +267,7 @@ export const Process = () => {
       step: "PHASE 01",
       title: "Research & Strategy",
       desc: "Deep intelligence using all technical platforms available to amalgamate, analyze, and understand.",
-      items: ["Proprietary Market Research", "Competitive Market Analysis", "Avatar & Motivations", "Strategic Market Positioning", "Psychological Analysis"],
+      items: ["Proprietary Market Research", "Competitive Market Analysis", "Avatar & Motivations", "Strategic Market Positioning", "Audience & Market Psychology"],
       color: "from-brand-pink to-brand-purple"
     },
     {
@@ -263,7 +330,7 @@ export const Process = () => {
 
 export const Testimonials = () => {
   const testimonials = [
-    { name: "Matt Lloyd", title: "9-figure/yr Earner — Matt Lloyd, Previously Largest Affiliate Marketer", quote: "His approach from the start was unlike any other copywriter I've worked with over 15 years. He asked deep questions about the audience and what drove them. When I got the first draft back, I could see the difference it made. Lawrence wrote copy matched to what prospects wanted at a deep emotional level. With most copywriters you get cookie-cutter copy. With Lawrence, you get highly effective, on-target copy that actually works." },
+    { name: "Matt Lloyd", title: "9-figure/yr Earner — Matt Lloyd, Previously World's Largest Affiliate Marketer", quote: "His approach from the start was unlike any other copywriter I've worked with over 15 years. He asked deep questions about the audience and what drove them. When I got the first draft back, I could see the difference it made. Lawrence wrote copy matched to what prospects wanted at a deep emotional level. With most copywriters you get cookie-cutter copy. With Lawrence, you get highly effective, on-target copy that actually works." },
     { name: "Tanner Chidester", title: "8-figure Earner & 4X Two Comma Club Member — Tanner Chidester", quote: "If there's one word to describe Lawrence — he over delivers. He's thorough, dedicated, makes sure he has all the correct information to make the copy as beneficial as possible. If you're looking for a copywriter who's detailed, gets the job done on time, and is willing to do whatever it takes — Lawrence is definitely your guy." },
     { name: "Yasir M.", title: "7-figure Makeup Brand & #1 Amazon Best-Seller", quote: "I've been working with Lawrence over the last 6 months on Facebook ads, video scripts, and USPs for our 7-figure brand. Based on his work, I also asked him to help with our SaaS. He's very professional, of great help, and a great guy to work with. I would highly recommend Lawrence as a copywriter." },
     { name: "Justin Woll & Thore Hauthal", title: "8-figure & 4X Two Comma Club Member — Justin Woll & Thore Hauthal", quote: "Lawrence helped in multiple areas of copy. Through his deep understanding of market psychology, he improved our long-established sales copy and delivered emails focused on both conversion and brand awareness. He's a gifted writer, always brings his best effort, and goes beyond what's asked. I can only recommend Lawrence to anyone looking for an experienced writer." },
