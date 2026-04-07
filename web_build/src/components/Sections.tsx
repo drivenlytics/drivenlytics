@@ -290,7 +290,7 @@ export const Process = () => {
   return (
     <section id="process" className="pt-20 pb-20 md:py-40 px-6 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-16 md:mb-32 text-center">
+        <div className="mb-16 md:mb-32 text-center md:text-left">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[22px] md:text-[30px] mb-6 block">The Methodology</span>
           <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center md:text-left [word-spacing:1rem]">Analytical Alchemy</h2>
         </div>
@@ -337,8 +337,8 @@ export const Testimonials = () => {
     { name: "Justin Woll & Thore Hauthal", title: "8-figure & 4X Two Comma Club Member — Justin Woll & Thore Hauthal", quote: "Lawrence helped in multiple areas of copy. Through his deep understanding of market psychology, he improved our long-established sales copy and delivered emails focused on both conversion and brand awareness. He's a gifted writer, always brings his best effort, and goes beyond what's asked. I can only recommend Lawrence to anyone looking for an experienced writer." },
     { name: "Isak M.", title: "ISAMO Consulting — Isak M., Founder & Email Marketer", quote: "Lawrence is the only one I hired early and decided to keep — because of his dedication and ability to work with a team. His email copywriting engages leads on a whole new level, and the subject lines are really killing it. If you're thinking about hiring Lawrence, stop thinking and just do it. You will not regret it." },
     { name: "\"Iggy\" O.", title: "Tri-Fit Training — \"Iggy\" O., Founder, Marketer, & Fit Pro", quote: "Lawrence bangs out some pretty sweet copy I use for paid traffic and campaigns. I fill out the avatar, give him the angle, and he delivers fast. If you don't like writing and you value your time — he's the man to do it. He does a fantastic job. Check him out, he's definitely worth it." },
-    { name: "David N.", title: "Marketer 4 Wellness — David N., Founder, Marketer, Wellness Coach, Optometrist", quote: "Reliable, honest, and a great listener. His gift with words effortlessly establishes immediate trust with readers. I can't thank him enough for creating amazing copy for my digital marketing agency's website. Look no further for a great content producer — and just as importantly, a 'top bloke' to work with." },
-    { name: "Chris C.", title: "Seed Omega — Chris C., Operations Manager (Singapore) & Co-founder of Seed Omega", quote: "I appreciate the copies you've provided for my company write-up. Truly remarkable work and very professional content editing. Will definitely come back if I need any more editing or writing!" },
+    // { name: "David N.", title: "Marketer 4 Wellness — David N., Founder, Marketer, Wellness Coach, Optometrist", quote: "Reliable, honest, and a great listener. His gift with words effortlessly establishes immediate trust with readers. I can't thank him enough for creating amazing copy for my digital marketing agency's website. Look no further for a great content producer — and just as importantly, a 'top bloke' to work with." },
+    // { name: "Chris C.", title: "Seed Omega — Chris C., Operations Manager (Singapore) & Co-founder of Seed Omega", quote: "I appreciate the copies you've provided for my company write-up. Truly remarkable work and very professional content editing. Will definitely come back if I need any more editing or writing!" },
   ];
 
   return (
