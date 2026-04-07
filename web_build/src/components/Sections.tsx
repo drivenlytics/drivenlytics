@@ -11,7 +11,7 @@ const Logo = () => (
   </div>
 );
 
-export const Navbar = () => (
+export const Navbar = ({ onStart }: { onStart: () => void }) => (
   <nav className="sticky top-0 z-50 px-6 py-4">
     <div className="max-w-7xl mx-auto">
       <div className="brand-bar-border w-full p-4 md:p-8 flex items-center justify-between bg-black/80 backdrop-blur-xl">
@@ -23,14 +23,14 @@ export const Navbar = () => (
             <a href="#testimonials" className="text-base font-black uppercase tracking-[0.4em] text-gray-400 hover:text-white transition-colors">Results</a>
           </div>
         </div>
-        <a href="mailto:hello@drivenlytics.com" className="hidden md:block px-8 py-3.5 bg-white text-black text-[20px] font-black uppercase tracking-[0.2em] rounded-full transition-all duration-500 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
+        <button onClick={onStart} className="hidden md:block px-8 py-3.5 bg-white text-black text-[20px] font-black uppercase tracking-[0.2em] rounded-full transition-all duration-500 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
           Start
-        </a>
+        </button>
         <div className="md:hidden flex items-center gap-4">
           <span className="text-[20px] font-black tracking-tighter uppercase text-white italic">DRIVENLYTICS</span>
-          <a href="mailto:hello@drivenlytics.com" className="px-3 py-1.5 bg-white text-black text-[9px] font-black uppercase tracking-[0.2em] rounded-full ring-1 ring-brand-purple/60 shadow-[0_0_20px_rgba(139,92,246,0.7),_12px_0_20px_rgba(139,92,246,0.3),_-12px_0_20px_rgba(139,92,246,0.3)]">
+          <button onClick={onStart} className="px-3 py-1.5 bg-white text-black text-[9px] font-black uppercase tracking-[0.2em] rounded-full ring-1 ring-brand-purple/60 shadow-[0_0_20px_rgba(139,92,246,0.7),_12px_0_20px_rgba(139,92,246,0.3),_-12px_0_20px_rgba(139,92,246,0.3)]">
             Start
-          </a>
+          </button>
         </div>
         <button className="md:hidden flex flex-col gap-[5px] p-1 ml-3" aria-label="Menu">
           <span className="w-5 h-[2px] bg-white block" />
@@ -42,7 +42,7 @@ export const Navbar = () => (
   </nav>
 );
 
-export const Hero = () => (
+export const Hero = ({ onStart }: { onStart: () => void }) => (
   <section className="relative pt-0 pb-0 px-6 flex flex-col items-center overflow-hidden">
     <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/20 blur-[180px] rounded-full -z-10 animate-pulse" />
     <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-blue/10 blur-[180px] rounded-full -z-10" />
@@ -88,7 +88,7 @@ export const Hero = () => (
         transition={{ delay: 0.6 }}
         className="flex flex-col items-center gap-5 md:gap-10"
       >
-        <button className="group relative px-14 py-6 bg-white text-black font-black text-[24px] uppercase tracking-widest rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
+        <button onClick={onStart} className="group relative px-14 py-6 bg-white text-black font-black text-[24px] uppercase tracking-widest rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple">
           <span className="relative z-10 flex items-center gap-5">
             Start <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
           </span>
@@ -275,7 +275,7 @@ export const Process = () => {
       step: "PHASE 02",
       title: "Creatives & Persuasion",
       desc: "Creatively build 0 - 1 out of the box solutions that build trust and increase conversions.",
-      items: ["Brand Positioning", "Character Positioning", "Personality & Motivation Alignment", "Story, Narrative, Voice", "Persuasion & NLP Strategies", "Brand Building 0 - 1", "Design for Branding", "Layout, UI/UX", "Logos", "Sales Copy and Site Design", "SEO that Ranks in 2026"],
+      items: ["Brand Positioning", "Personality & Motivation Alignment", "Story, Narrative, Voice", "Persuasion & NLP Strategies", "Brand Building 0 - 1", "Design for Branding", "Layout, UI/UX", "Logos", "Sales Copy and Site Design", "SEO that Ranks in 2026"],
       color: "from-brand-purple to-brand-blue"
     },
     {
@@ -433,7 +433,7 @@ export const Niches = () => {
   );
 };
 
-export const Contact = () => (
+export const Contact = ({ onStart }: { onStart: () => void }) => (
   <section className="py-12 md:py-24 px-6 relative overflow-hidden">
     <div className="max-w-6xl mx-auto text-center relative z-10">
       <motion.div
@@ -448,12 +448,12 @@ export const Contact = () => (
         <p className="text-lg md:text-4xl text-gray-400 mb-10 md:mb-20 font-bold uppercase tracking-tight max-w-2xl mx-auto">
           Ready to conquer your market?<br />Let's build your breakthrough.
         </p>
-        <a
-          href="mailto:hello@drivenlytics.com"
+        <button
+          onClick={onStart}
           className="inline-flex items-center gap-4 md:gap-6 px-8 py-4 md:px-16 md:py-8 bg-white text-black font-black text-base md:text-2xl uppercase tracking-widest rounded-full hover:bg-brand-purple hover:text-white transition-all shadow-[0_0_60px_-15px_rgba(255,255,255,0.4)]"
         >
-          Schedule a call <MessageSquare className="w-10 h-10" />
-        </a>
+          Start <MessageSquare className="w-10 h-10" />
+        </button>
       </motion.div>
     </div>
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-purple/10 blur-[200px] rounded-full -z-20" />
