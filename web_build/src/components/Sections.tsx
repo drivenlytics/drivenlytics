@@ -149,8 +149,9 @@ export const Services = () => {
         "All designs + layout",
         "Lead form",
         "5 custom email drip sequence",
+        "Fully customized for your target audience.",
       ],
-      subdesc: "Fully customized for your target audience.",
+      subdesc: "",
       delivery: "7 Business Days",
       icon: <Zap className="w-10 h-10" />
     },
