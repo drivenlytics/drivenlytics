@@ -6,9 +6,9 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
         <Process />
         <Niches />
+        <Services />
         <Testimonials />
         <Contact />
       </main>
