@@ -1,4 +1,4 @@
-import { Navbar, Hero, Services, Process, Testimonials, Contact, Footer } from "./components/Sections";
+import { Navbar, Hero, Services, Process, Niches, Testimonials, Contact, Footer } from "./components/Sections";
 
 export default function App() {
   return (
@@ -8,6 +8,7 @@ export default function App() {
         <Hero />
         <Services />
         <Process />
+        <Niches />
         <Testimonials />
         <Contact />
       </main>

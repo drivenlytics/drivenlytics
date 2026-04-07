@@ -371,6 +371,69 @@ export const Testimonials = () => {
   );
 };
 
+export const Niches = () => {
+  const niches = [
+    "High-Ticket Coaching",
+    "SaaS",
+    "eCommerce / Shopify",
+    "Makeup",
+    "Supplements & Nutrition",
+    "Fashion",
+    "Dating & Relationships",
+    "Roofing",
+    "Outdoor / Hiking / Camping",
+    "Skincare",
+    "Gizmos / Gadgets / Tech",
+    "Startups",
+    "Finance & Fintech",
+    "Facebook Ads",
+    "Health & Wellness",
+    "YouTube Ads",
+    "Cannabis B2B & B2C",
+    "Affiliates",
+    "Spiritual / Psychic",
+    "Real Estate",
+    "Social Media Growth",
+    "Crowdfunding",
+    "Fitness / Gym Owners",
+    "Gym Equipment",
+    "Hardware Inventions",
+    "Influencers",
+    "YouTube Influencers",
+    "Marketing Education",
+    "Instagram Growth",
+  ];
+
+  return (
+    <section className="pt-10 pb-20 md:pt-0 md:pb-40 px-6 bg-black">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-16 md:mb-24 text-center md:text-left">
+          <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[22px] md:text-[30px] mb-6 block">Experience</span>
+          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center md:text-left">Across Markets</h2>
+        </div>
+
+        <div className="flex flex-wrap gap-3 md:gap-4">
+          {niches.map((label, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.03, duration: 0.4 }}
+              style={{ background: "linear-gradient(to right, #8b5cf6, #d946ef, #8b5cf6)", padding: "1px" }}
+              className="group cursor-default"
+            >
+              <div className="px-5 py-3 bg-white text-black font-black uppercase tracking-[0.15em] text-[11px] md:text-[13px] group-hover:text-white group-hover:bg-black transition-all duration-300">
+                {label}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const Contact = () => (
   <section className="py-12 md:py-24 px-6 relative overflow-hidden">
     <div className="max-w-6xl mx-auto text-center relative z-10">
