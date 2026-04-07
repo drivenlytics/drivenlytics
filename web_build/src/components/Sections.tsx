@@ -420,11 +420,9 @@ export const Niches = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.03, duration: 0.4 }}
-              className="group cursor-default relative p-[1px]"
+              className="group cursor-default"
             >
-              <div className="absolute inset-0 bg-white/25 group-hover:opacity-0 transition-opacity duration-300" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "linear-gradient(to right, #8b5cf6, #d946ef, #8b5cf6)" }} />
-              <div className="relative px-5 py-3 bg-white text-black font-black uppercase tracking-[0.15em] text-[11px] md:text-[13px] group-hover:text-white group-hover:bg-black transition-all duration-300">
+              <div className="px-5 py-3 bg-white text-black font-black uppercase tracking-[0.15em] text-[11px] md:text-[13px] group-hover:text-white group-hover:bg-black transition-all duration-300">
                 {label}
               </div>
             </motion.div>
