@@ -194,7 +194,7 @@ export const Services = () => {
       price: "$5,000+/mo.",
       type: "",
       desc: [
-        "Full-site builds, WP, React, Vite, Next",
+        "Full-site builds",
         "Brand Design 0–1 builds",
         "Logo/UI/UX",
         "Strategic funnels",
