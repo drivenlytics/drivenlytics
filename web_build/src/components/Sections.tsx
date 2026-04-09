@@ -443,14 +443,14 @@ export const Contact = ({ onStart }: { onStart: () => void }) => (
         className="hero-gradient-border p-8 md:p-32"
       >
         <h2 className="text-4xl md:text-9xl font-black tracking-tighter mb-8 md:mb-16 uppercase italic text-white leading-[0.8]">
-          Ready to<br />Dominate?
+          Ready to Conquer<br />Your Market?
         </h2>
         <p className="text-lg md:text-4xl text-gray-400 mb-10 md:mb-20 font-bold uppercase tracking-tight max-w-2xl mx-auto">
-          Ready to conquer your market?<br />Let's build your breakthrough.
+          Let's build your<br />breakthrough.
         </p>
         <button
           onClick={onStart}
-          className="inline-flex items-center gap-4 md:gap-6 px-8 py-4 md:px-16 md:py-8 bg-white text-black font-black text-base md:text-2xl uppercase tracking-widest rounded-full hover:bg-brand-purple hover:text-white transition-all shadow-[0_0_60px_-15px_rgba(255,255,255,0.4)]"
+          className="inline-flex items-center gap-4 md:gap-6 px-8 py-4 md:px-16 md:py-8 bg-white text-black font-black text-base md:text-2xl uppercase tracking-widest rounded-full hover:bg-[#7c3aed] hover:text-white transition-all shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple"
         >
           Start <MessageSquare className="w-10 h-10" />
         </button>

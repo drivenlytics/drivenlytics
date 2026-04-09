@@ -12,6 +12,16 @@
 }
 
 @layer base {
+  html {
+    scroll-padding-top: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 6rem;
+    }
+  }
+
   body {
     @apply bg-brand-black text-white antialiased selection:bg-brand-purple selection:text-white;
   }
