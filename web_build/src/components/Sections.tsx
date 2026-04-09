@@ -3,7 +3,10 @@ import { ArrowRight, Zap, Target, MessageSquare, Quote, ChevronRight, Sparkles }
 
 
 const Logo = () => (
-  <div className="flex items-center gap-3 group cursor-pointer">
+  <div
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    className="flex items-center gap-3 group cursor-pointer"
+  >
     <img src="/logo.svg" alt="Drivenlytics" className="h-7 md:h-10 w-auto" />
     <span className="hidden md:inline text-xl md:text-4xl font-black tracking-tighter uppercase text-white italic">
       DRIVENLYTICS
@@ -450,13 +453,12 @@ export const Contact = ({ onStart }: { onStart: () => void }) => (
         </p>
         <button
           onClick={onStart}
-          className="inline-flex items-center gap-4 md:gap-6 px-8 py-4 md:px-16 md:py-8 bg-white text-black font-black text-base md:text-2xl uppercase tracking-widest rounded-full hover:bg-[#7c3aed] hover:text-white transition-all shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple"
+          className="inline-flex items-center gap-4 md:gap-6 px-8 py-4 md:px-16 md:py-8 bg-white text-black font-black text-base md:text-2xl uppercase tracking-widest rounded-full hover:bg-[#7c3aed] hover:text-white transition-[background-color,box-shadow] shadow-[0_0_40px_rgba(139,92,246,0.6),_40px_0_36px_rgba(139,92,246,0.18),_-40px_0_36px_rgba(139,92,246,0.18)] ring-2 ring-brand-purple/60 hover:shadow-[0_0_64px_rgba(139,92,246,0.9),_60px_0_48px_rgba(139,92,246,0.3),_-60px_0_48px_rgba(139,92,246,0.3)] hover:ring-brand-purple"
         >
           Start <MessageSquare className="w-10 h-10" />
         </button>
       </motion.div>
     </div>
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-purple/10 blur-[200px] rounded-full -z-20" />
   </section>
 );
 
