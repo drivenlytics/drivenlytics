@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;900&display=swap');
+
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .brand-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+      padding: 32px 48px 32px 160px;
+      background: #000;
+      border-radius: 1rem;
+      position: relative;
+    }
+
+    .brand-bar::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 1rem;
+      padding: 1px;
+      background: linear-gradient(to right, #8b5cf6, #d946ef, #8b5cf6);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .brand-bar img {
+      height: 80px;
+      width: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-text .name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 3.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    .brand-text .tagline {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 0.65rem;
+      color: #9ca3af;
+      letter-spacing: 0.05em;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="brand-bar">
+    <img src="web_build/public/logo.svg" alt="Drivenlytics" />
+    <div class="brand-text">
+      <span class="name">DRIVENLYTICS</span>
+      <span class="tagline">Data-Driven Performance Marketing Solutions</span>
+    </div>
+  </div>
+</body>
+</html>
