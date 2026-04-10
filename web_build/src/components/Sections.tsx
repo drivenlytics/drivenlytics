@@ -185,8 +185,7 @@ export const Services = () => {
       price: "$1,000/mo.",
       type: " ",
       desc: [
-        "4 Unique SEO blog content posts",
-        "With images",
+        "4 Unique SEO blog content posts with curated images/assets",
         "Proprietary SEO high-ranking system [High Google Signal]",
         "On-page SEO + Schema markup",
         "Designed for your Pillar-Cluster system",
