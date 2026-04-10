@@ -1,32 +1,31 @@
 # Drivenlytics SEO Checklist
 > Everything Yoast/RankMath handles on WP — ported for our Next.js/Vite build.
-> Edit values in [ ] before implementing.
 
 ---
 
 ## 1. Meta Tags (index.html)
-- [ ] `<title>` — [Drivenlytics | Performance Marketing Agency]
-- [ ] `<meta name="description">` — [150–160 chars. Write this.]
-- [ ] `<meta name="robots" content="index, follow">`
-- [ ] `<link rel="canonical" href="https://drivenlytics.com">`
+- [x] `<title>` — Drivenlytics | Data-Driven Performance Marketing Agency
+- [x] `<meta name="description">` — 156 chars, confirmed
+- [x] `<meta name="robots" content="index, follow">`
+- [x] `<link rel="canonical" href="https://drivenlytics.com">`
 
 ---
 
 ## 2. Open Graph — Facebook & LinkedIn (index.html)
-- [ ] `og:title` — [same as title tag or variant]
-- [ ] `og:description` — [same as meta description or shorter]
-- [ ] `og:url` — https://drivenlytics.com
-- [ ] `og:type` — website
-- [ ] `og:image` — [1200x630px image URL — need to create this asset]
-- [ ] `og:site_name` — Drivenlytics
+- [x] `og:title` — Drivenlytics | Data-Driven Performance Marketing Agency
+- [x] `og:description` — same as meta description
+- [x] `og:url` — https://drivenlytics.com
+- [x] `og:type` — website
+- [x] `og:image` — https://drivenlytics.com/og-image.png (1200x630px, created in Canva)
+- [x] `og:site_name` — Drivenlytics
 
 ---
 
 ## 3. Twitter Card (index.html)
-- [ ] `twitter:card` — summary_large_image
-- [ ] `twitter:title` — [same as og:title]
-- [ ] `twitter:description` — [same as og:description]
-- [ ] `twitter:image` — [same as og:image]
+- [x] `twitter:card` — summary_large_image
+- [x] `twitter:title` — Drivenlytics | Data-Driven Performance Marketing Agency
+- [x] `twitter:description` — same as og:description
+- [x] `twitter:image` — https://drivenlytics.com/og-image.png
 
 ---
 
@@ -40,17 +39,37 @@
 ---
 
 ## 5. Heading Hierarchy (Sections.tsx)
-- [ ] `<h1>` — one only, keyword-optimized [current: "DRIVENLYTICS" — needs work]
-- [ ] `<h2>` — section headings keyword-optimized
-- [ ] `<h3>` — service/subsection headings
-- [ ] Audit: no skipped heading levels (h1 → h3 without h2)
+
+### h1
+- [x] Visible: `DRIVENLYTICS`
+- [x] sr-only: `DRIVENLYTICS - CRO High-Performance Marketing Solutions`
+
+### h2s — edit sr-only text below, I'll implement
+| Visible (on site) | sr-only (for Google) — edit this |
+|---|---|
+| Creative Strategic Breakthroughs | CRO High-Performance Marketing Services |
+| Analytical Alchemy | Data-Driven Marketing Process & Strategy |
+| Market Validation | Client Results & Testimonials |
+| Across Markets | [your seo text here] |
+| Ready to Conquer Your Market? | Work With a Performance Marketing Expert |
+
+### h3s — edit sr-only text below, I'll implement
+| Visible (on site) | sr-only (for Google) — edit this |
+|---|---|
+| Launch Kit | Landing Page & Email Marketing Kit |
+| Brand Foundation Kit | Brand Building: Strategy & Identity |
+| Content Retainer | Full-Funnel SEO Content Marketing Service |
+| Custom / Full-Stack | Full-Stack Marketing & Web Development |
+| Research & Strategy | Market Research & Competitive Analysis |
+| Creatives & Persuasion | Brand Design & Conversion Copywriting |
+| Execution | Marketing Implementation & Deployment |
 
 ---
 
 ## 6. Image SEO (Sections.tsx + assets)
 - [ ] Logo `alt` tag — [Drivenlytics logo]
 - [ ] All images have descriptive `alt` attributes
-- [ ] OG image created (1200x630px) and hosted at /og-image.png
+- [x] OG image created (1200x630px) and hosted at /og-image.png
 
 ---
 
@@ -69,9 +88,9 @@
 ---
 
 ## 9. Focus Keyword Strategy
-- [ ] Define primary keyword — [e.g. "performance marketing agency"]
-- [ ] Define secondary keywords — [e.g. "conversion copywriter", "marketing agency for coaches"]
-- [ ] Primary keyword in: title, h1, meta description, first paragraph
+- [x] Primary keyword — `Drivenlytics Lawrence` (ranks for brand + personal name searches)
+- [ ] Secondary keywords — to be defined per content page
+- [ ] Primary keyword in: h1, meta description, first paragraph
 - [ ] Secondary keywords in: h2s, body copy
 
 ---
@@ -83,7 +102,7 @@
 
 ---
 
-## Assets Needed Before Full Implementation
-- [ ] OG image (1200x630px) — brand banner for social sharing previews
+## Assets
+- [x] OG image (1200x630px) — created and in /public/og-image.png
 - [ ] Confirm domain is live at drivenlytics.com
 - [ ] Confirm GSC verified

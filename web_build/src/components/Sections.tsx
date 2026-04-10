@@ -71,7 +71,7 @@ export const Hero = ({ onStart }: { onStart: () => void }) => (
 
           <h1 className="text-[11vw] md:text-8xl lg:text-9xl font-black tracking-tighter mb-12 leading-[0.85] uppercase italic text-white flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6">
             <img src="/logo.svg" alt="" className="h-[1.4em] w-auto" />
-            DRIVENLYTICS
+            DRIVENLYTICS<span className="sr-only"> - CRO High-Performance Marketing Solutions</span>
           </h1>
 
           <p className="text-xl md:text-3xl text-gray-400 max-w-3xl mx-auto md:ml-[255px] leading-tight font-medium text-center">
@@ -143,7 +143,8 @@ const FullStackIcon = () => (
 export const Services = () => {
   const services = [
     {
-      title: "Launch Ready",
+      title: "Launch Kit",
+      srOnly: "Landing Page & Email Marketing Package",
       price: "$1,000",
       type: "one-time",
       desc: [
@@ -160,6 +161,7 @@ export const Services = () => {
     },
     {
       title: "Brand Foundation Kit",
+      srOnly: "Brand Strategy & Identity Building",
       price: "$3,000–$5,000",
       type: "one-time",
       desc: [
@@ -179,6 +181,7 @@ export const Services = () => {
     },
     {
       title: "Content Retainer",
+      srOnly: "SEO Content Marketing Service",
       price: "$1,000/mo.",
       type: " ",
       desc: [
@@ -194,6 +197,7 @@ export const Services = () => {
     },
     {
       title: "Custom / Full-Stack",
+      srOnly: "Full-Stack Marketing & Web Development",
       price: "$5,000+/mo.",
       type: "",
       desc: [
@@ -222,7 +226,7 @@ export const Services = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-32 text-center md:text-left">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Arsenal</span>
-          <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">Creative Strategic Breakthroughs</h2>
+          <h2 className="text-4xl md:text-8xl font-black uppercase tracking-tighter italic leading-none"><span className="sr-only">CRO High-Performance Marketing Services — </span>Creative Strategic Breakthroughs</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => (
@@ -237,7 +241,7 @@ export const Services = () => {
               <div className="text-brand-purple mb-12 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
                 {s.icon}
               </div>
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-4 leading-tight">{s.title}</h3>
+              <h3 className="text-2xl font-black uppercase tracking-tight mb-4 leading-tight">{s.srOnly && <span className="sr-only">{s.srOnly} — </span>}{s.title}</h3>
               <div className="mb-8 flex flex-col gap-1">
                 <span className="text-3xl font-black text-white break-words">{s.price}</span>
                 <span className="text-gray-600 text-[10px] font-black uppercase tracking-widest">{s.type}</span>
@@ -270,6 +274,8 @@ export const Process = () => {
     {
       step: "PHASE 01",
       title: "Research & Strategy",
+      srOnly: "Market Research & Competitive Analysis",
+
       desc: "Deep intelligence using all technical platforms available to amalgamate, analyze, and understand.",
       items: ["Proprietary Market Research", "Competitive Market Analysis", "Avatar & Motivations", "Strategic Market Positioning", "Audience & Market Psychology"],
       color: "from-brand-pink to-brand-purple"
@@ -277,6 +283,7 @@ export const Process = () => {
     {
       step: "PHASE 02",
       title: "Creatives & Persuasion",
+      srOnly: "Brand Design & Conversion Copywriting",
       desc: "Creatively build 0 - 1 out of the box solutions that build trust and increase conversions.",
       items: ["Brand Positioning", "Personality & Motivation Alignment", "Story, Narrative, Voice", "Persuasion & NLP Strategies", "Brand Building 0 - 1", "Design for Branding", "Layout, UI/UX", "Logos", "Sales Copy and Site Design", "SEO that Ranks in 2026"],
       color: "from-brand-purple to-brand-blue"
@@ -284,6 +291,7 @@ export const Process = () => {
     {
       step: "PHASE 03",
       title: "Execution",
+      srOnly: "Marketing Implementation & Deployment",
       desc: "Precision deployment of assets designed for maximum conversion velocity.",
       items: ["Strategizing & Implementing", "Backend/Tech Frameworks", "Planning", "Executing"],
       color: "from-brand-blue to-brand-pink"
@@ -295,7 +303,7 @@ export const Process = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16 md:mb-32 text-center md:text-left">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[22px] md:text-[30px] mb-6 block">The Methodology</span>
-          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center md:text-left [word-spacing:1rem]">Analytical Alchemy</h2>
+          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center md:text-left [word-spacing:1rem]"><span className="sr-only">Data-Driven Marketing Process & Strategy — </span>Analytical Alchemy</h2>
         </div>
         <div className="space-y-12">
           {phases.map((p, i) => (
@@ -312,7 +320,7 @@ export const Process = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none" />
                 <div className="lg:w-1/2 relative z-10">
                   <div className="text-brand-purple font-black text-sm uppercase tracking-[0.5em] mb-8">{p.step}</div>
-                  <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 italic">{p.title}</h3>
+                  <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 italic">{p.srOnly && <span className="sr-only">{p.srOnly} — </span>}{p.title}</h3>
                   <p className="text-xl md:text-2xl text-gray-400 font-medium leading-tight mb-12">{p.desc}</p>
                 </div>
                 <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -349,7 +357,7 @@ export const Testimonials = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-32 text-center">
           <span className="text-brand-purple font-black uppercase tracking-[0.4em] text-[30px] mb-6 block">The Proof</span>
-          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center">Market Validation</h2>
+          <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-center"><span className="sr-only">Client Results & Testimonials — </span>Market Validation</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
@@ -446,7 +454,7 @@ export const Contact = ({ onStart }: { onStart: () => void }) => (
         className="hero-gradient-border p-8 md:p-32"
       >
         <h2 className="text-4xl md:text-9xl font-black tracking-tighter mb-8 md:mb-16 uppercase italic text-white leading-[0.8]">
-          Ready to Conquer<br />Your Market?
+          <span className="sr-only">Work With a Performance Marketing Expert — </span>Ready to Conquer<br />Your Market?
         </h2>
         <p className="text-lg md:text-4xl text-gray-400 mb-10 md:mb-20 font-bold uppercase tracking-tight max-w-2xl mx-auto">
           Let's build your<br />breakthrough.
