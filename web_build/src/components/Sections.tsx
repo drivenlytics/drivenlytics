@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { ArrowRight, Zap, Target, MessageSquare, Quote, ChevronRight, Sparkles } from "lucide-react";
 
