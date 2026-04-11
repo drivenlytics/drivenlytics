@@ -1,3 +1,15 @@
+/**
+ * LEGACY — DO NOT MOVE BACK TO src/pages/ OR src/components/
+ *
+ * This file is in src/legacy/ because Next.js treats src/pages/ as the Pages Router,
+ * which causes a build failure on the Vite-specific `?raw` import below.
+ * It is excluded from TypeScript compilation via tsconfig.json.
+ *
+ * When FounderStory is ready for Next.js, the markdown should be loaded via:
+ *   import fs from "fs";
+ *   const storyMd = fs.readFileSync(path.join(process.cwd(), "content/founder-story.md"), "utf-8");
+ * in a Server Component, replacing the `?raw` import entirely.
+ */
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { marked } from "marked";

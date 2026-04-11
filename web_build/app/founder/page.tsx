@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Founder | Drivenlytics",
+  alternates: { canonical: "https://drivenlytics.com/founder" },
+  robots: { index: false, follow: false },
+};
 
 export default function FounderPage() {
   return (
