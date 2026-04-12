@@ -49,7 +49,7 @@ export const Navbar = ({ onStart }: { onStart: () => void }) => (
 
 export const Hero = ({ onStart }: { onStart: () => void }) => (
   <section className="relative pt-0 pb-0 px-6 flex flex-col items-center overflow-hidden">
-    <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/20 blur-[180px] rounded-full -z-10 animate-pulse [will-change:opacity]" />
+    <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-purple/20 blur-[180px] rounded-full -z-10 animate-pulse" />
     <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-blue/10 blur-[180px] rounded-full -z-10" />
 
     <div className="max-w-7xl w-full flex flex-col items-center">
