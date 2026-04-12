@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
+import { Outfit, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "../src/index.css";
 
@@ -7,13 +7,6 @@ const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-outfit",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-inter",
   display: "swap",
 });
 
@@ -113,9 +106,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${outfit.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" />
         {jsonLd.map((schema, i) => (
           <script
             key={i}
