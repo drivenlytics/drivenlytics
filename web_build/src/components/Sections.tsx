@@ -111,8 +111,8 @@ export const Hero = ({ onStart }: { onStart: () => void }) => (
               { letter: "D", bg: "#8B5CF6" },
               { letter: "C", bg: "#6D28D9" },
             ].map((a, i) => (
-              <div key={i} className="w-12 h-12 rounded-full border border-brand-purple bg-black flex items-center justify-center shrink-0">
-                <span className="text-white font-black text-base">{a.letter}</span>
+              <div key={i} className="group w-12 h-12 rounded-full border border-brand-purple bg-black flex items-center justify-center shrink-0 hover:bg-white transition-colors duration-200 cursor-pointer">
+                <span className="text-white font-black text-base group-hover:text-black transition-colors duration-200">{a.letter}</span>
               </div>
             ))}
           </a>
