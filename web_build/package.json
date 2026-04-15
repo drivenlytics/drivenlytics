@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@vercel/speed-insights": "^2.0.0",
     "lucide-react": "^0.546.0",
     "marked": "^18.0.0",
     "motion": "^12.23.24",

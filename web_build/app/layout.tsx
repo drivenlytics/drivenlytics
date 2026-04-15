@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../src/index.css";
 
 const outfit = Outfit({
@@ -135,6 +136,7 @@ export default function RootLayout({
           />
         </noscript>
         {children}
+        <SpeedInsights />
         {/* Google Tag Manager */}
         <Script
           id="gtm"
