@@ -1,0 +1,39 @@
+# SOP: THE ORGANIC-TO-PAID "ANDROMEDA" PIPELINE
+
+## 1. OBJECTIVE
+Identify "Unicorn" organic content through objective mathematical outliers and scale them via paid ads to bypass geographic geofencing and build global brand affinity.
+
+## 2. KEY METRICS & FORMULAS
+The agent must establish a **Baseline** (Median of the last 20 posts) before identifying winners.
+
+### A. The Outlier Score Formula
+$Outlier \ Score = \frac{Current \ Content \ Metric}{Median \ Metric \ (Last \ 30 \ Days)}$
+
+**Thresholds:**
+* **< 2.0x Score:** Baseline/Noise. Do not promote.
+* **2.0x – 4.9x Score:** **Winner.** Suitable for "Value Ads" (Top of Funnel/Affinity).
+* **5.0x+ Score:** **Unicorn.** Immediately scale as "Conversion Ads" (Direct Offer).
+
+### B. Awareness vs. Affinity
+* **Brand Awareness:** High Views/Likes. Surface-level recognition.
+* **Brand Affinity:** High **Saves** and **Shares**. This is the "Modified" (M) indicator that the content has changed the user's perspective or provided high utility.
+* **KPI Goal:** Save-to-View Ratio > 2%.
+
+---
+
+## 3. OPERATIONAL WORKFLOW
+
+### Step 1: Organic Testing (The "Laboratory")
+* Deploy 5–10 pieces of content weekly targeting specific international demographics.
+* Label posts by "Geographic Intent" to monitor if the algorithm is geofencing reach to the local IP/SIM region.
+
+### Step 2: The 72-Hour Audit
+Scan all post analytics after 72 hours.
+* **Logic Gate:** * IF Outlier Score >= 3.0x AND Save-to-View Ratio >= 2%: **FLAG FOR PAID SPEND.**
+  * ELSE: Archive and analyze for Hook Failure (Retention drop in first 3 seconds).
+
+### Step 3: The Geofence Break (Paid Scaling)
+Use paid ads to "unlock" content that the organic algorithm has restricted geographically.
+* **Action:** Take the exact winning organic creative/copy.
+* **Targeting:** Manually set the Ad Location to the target foreign market (e.g., UK, USA, Japan).
+* **Budget:** * 2.0x Score: $10/day for "Engagement"

@@ -1,0 +1,111 @@
+# 📊 HangTherapy: Deep-Dive Tracking & Migration Analysis
+An architectural post-mortem: Comparing the Monolithic (Before) vs. Headless (After) tracking integrity.
+
+---
+
+## 1. THE "BEFORE": Monolithic WordPress (Unified Integrity)
+In your original configuration, HangTherapy operated as a single, centralized "Digital Body." Every limb was connected to the same nervous system.
+
+* **The Environment:** A single WordPress installation managed the entire user experience. Whether a user was reading a guide, viewing the homepage, or starting a quiz, they were communicating with the same server.
+* **The Tracking Setup:** Google Tag Manager (GTM) was loaded once in the header. Because the "Building" was unified, the security system (GTM) had a clear view of every room.
+
+### The Logic of Success:
+1.  **Initialization:** A user lands on the Homepage. GTM initializes and assigns a unique Client ID.
+2.  **Navigation:** They click a link to the *Ultimate Dead Hang Guide*.
+3.  **The Refresh:** The browser requests the new page, the server delivers it, and GTM re-loads instantly, carrying the same user identity over.
+
+**The Result:** ✅ **100% Attribution Accuracy.** Google Analytics could trace a user from a Google Organic search ➔ to the Home Page ➔ to a Guide ➔ to a Conversion. The session was unbreakable because the technical environment never changed.
+
+---
+
+## 2. THE "AFTER": Headless Vercel + WordPress (The Split-Brain Reality)
+Your migration created a high-performance "Split-Brain" architecture. While this is better for speed, it has fundamentally severed your data's "connective tissue."
+
+### The Environment:
+* **The Shell (Vercel):** Handles **ONLY** the Homepage (`hangtherapy.com`). This is built on Next.js—a "Single Page Application" (SPA) environment.
+* **The Engine (WordPress):** Handles **ALL** deeper paths (`hangtherapy.com/guides/*`, `/science/`, etc.). This is the legacy PHP environment.
+
+**The Core Conflict:** Your GTM "Eyes" are currently locked inside the WordPress engine. Because Vercel is a separate technical building, the user is effectively "outside the radar" whenever they are on your most important page: the Homepage.
+
+---
+
+## 3. TECHNICAL DEEP DIVE: The Navigational Hand-off
+This is where your business loses its most valuable data. Let's trace the "Organic-to-Home" journey in detail to see where the signals die.
+
+### Step 1: The Landing (Vercel "Ghosting")
+* **Action:** A user types your URL or lands on your homepage via a brand search.
+* **The Gap:** Vercel serves the homepage content, but because the GTM script is missing from the Vercel code, no tracking container loads.
+* **Consequence:** The user is a "Ghost." You have zero record of this visit. If you spent time or money driving this person to the site, that ROI is now invisible.
+
+### Step 2: The Click-Off (The Technical "Jump")
+* **Action:** The user clicks a call-to-action (e.g., "Read the Decompression Protocol").
+* **The Mechanic:** Because the homepage (Vercel) and the content (WordPress) are different systems, the browser must perform a "Hard Refresh." It effectively "leaves" the Vercel app and "enters" the WordPress server.
+* **The Gap:** There is no "Handshake" during this jump. Vercel doesn't tell WordPress, "Hey, I'm sending you a user who just landed here."
+
+### Step 3: The Arrival (WordPress "Amnesia")
+* **Action:** The WordPress guide loads. Your GTM container finally wakes up.
+* **The Crash:** Since GTM didn't see the user on the Homepage (Step 1), it has no history for this person. It treats them as a brand new visitor.
+
+**The Result:** 🚫 **Broken Attribution.**
+* **GA4 Report:** Shows a "New User" arriving via "Direct" traffic to the Guide.
+* **The Reality:** That user actually came from an Organic search and visited your Homepage first.
+* **The Loss:** You are now under-reporting your Homepage's value and over-reporting "Direct" traffic.
+
+---
+
+## 4. IMPACT ANALYSIS: Why This is Your Priority #1
+
+| Feature | Monolithic (Before) | Headless (After) | Business Consequence |
+| :--- | :--- | :--- | :--- |
+| **Homepage Visibility** | ✅ Fully Tracked | 🚫 **TOTAL BLINDNESS** | You cannot see your bounce rate or engagement on your primary offer. |
+| **Session Continuity** | ✅ 1 Unified Session | ❌ **FRAGMENTED** | One person looks like two separate people, doubling your "user count" falsely. |
+| **Navigation Capture** | ✅ Instant/Automatic | ❌ **FAIL (No Script)** | You lose the "Path to Conversion." You don't know which buttons work. |
+| **Organic Credit** | ✅ Google gets credit | ❌ **ATTRIBUTION LEAK** | SEO efforts look like "Direct" traffic. You can't prove your SEO is working. |
+| **Quiz Integration** | ✅ Single Domain Flow | ❌ **IFRAME GAP** | If they start a quiz from a blind homepage, the lead source is lost. |
+
+---
+
+## 5. THE IMPLICATIONS OF INACTION
+If the "Signal Gap" is not bridged, every other task in your GTD system is compromised:
+* **Content Strategy:** You might write 10 new guides, but you won't know if they are successfully funneling people to the homepage.
+* **Conversion Optimization:** You can't A/B test a homepage that doesn't have a tracking container.
+* **Scale:** You cannot safely spend on organic or paid growth if you can't see the "Front Door" of your business.
+
+---
+
+## 💡 THE SOLUTION: The Web + SS-GTM (Stape) Handshake
+To fix this, we must unify the Vercel Homepage and the WordPress Content into a single tracking ecosystem. We aren't just adding code; we are building a "Digital Passport" system so your users aren't treated like strangers when they move between Vercel and WordPress.
+
+### Step 1: Installing the "Security Camera" (Vercel Injection)
+* **The Layman’s View:** Right now, your homepage is a dark room. No one is watching the door. We need to install the GTM "Camera" directly into the Vercel code so it can see people the moment they land.
+* **The Step:** Your developer must take your GTM Web Container script and "inject" it into the master layout file of your Vercel site (usually `layout.js` or `_app.js`).
+* **Why it matters:** This is the "Check-in" desk. Without this, a user can spend an hour on your homepage, and Google Analytics will think the site was empty.
+* **Execution Check:** Once this is done, you should see your GTM container ID (e.g., GTM-XXXXXX) appearing in the source code of `hangtherapy.com`.
+
+### Step 2: Setting up the "Private Line" (Server-Side Routing via Stape)
+* **The Layman’s View:** Standard tracking is like sending a postcard through the public mail—sometimes it gets lost, or "Ad-Blockers" throw it in the trash. Using Stape (SS-GTM) is like having a private courier service.
+* **The Step:** In your GTM settings, we change the "Transport URL" to your Stape URL (e.g., `https://sgtm.hangtherapy.com`).
+* **Why it matters:** This makes your tracking **"First-Party."** It tells browsers: "This isn't a random tracking script; this is a core part of HangTherapy's own server." This bypasses most ad-blockers and ensures your data is much more accurate.
+* **Execution Check:** Your "Google Tag" inside GTM must have the `server_container_url` field filled in with your Stape address.
+
+### Step 3: The "Digital Passport" (Cookie Domain Management)
+* **The Layman’s View:** This is the most critical fix for your "Amnesia" problem. When a user moves from the Vercel Homepage to a WordPress Guide, the browser "refreshes." We need to make sure the user's ID "survives" that jump.
+* **The Step:** Inside your GTM Web Container, we go to the settings and set the `cookie_domain` to `auto`.
+* **Why it matters:** This tells the browser: "Store this user's ID for the whole hangtherapy.com family, not just the homepage."
+* **The Result:** When the user clicks "Read the Science" and jumps to WordPress, the WordPress GTM reads the "Passport" (the cookie) and says: "I know you. You're the same person who just landed on the homepage via Google Organic 2 minutes ago." This keeps the session alive and preserves your organic attribution.
+
+### Step 4: Watching the "Sliding Doors" (History Change Triggers)
+* **The Layman’s View:** WordPress works like a traditional house with physical doors (every click is a "Hard Refresh"). Vercel works like a house with "Sliding Doors" (Next.js swaps content without refreshing the whole building). GTM often misses these sliding door movements.
+* **The Step:** In GTM, we create a new trigger called **"History Change."** We attach your GA4 tags to this trigger instead of just the "Page View" trigger.
+* **Why it matters:** This ensures that if you ever add more pages to the Vercel side, or if a user interacts with the homepage in a way that changes the URL, GTM "hears" it and records it. It keeps the "eyes" moving even when the page doesn't reload.
+
+---
+
+## 6. FINAL SUMMARY: Restoring Organic Integrity
+By implementing this four-step handshake, you move from "Split-Brain" back to a **Unified Body**:
+1.  **Identity:** A user lands on the Vercel Homepage via Organic Search. They are immediately tagged and identified.
+2.  **The Journey:** They explore the homepage and then "Jump" to a WordPress guide.
+3.  **The Handshake:** Because of the `cookie_domain: auto` and Stape routing, WordPress recognizes them instantly.
+4.  **The Victory:** Your GA4 report correctly shows one single session starting from an "Organic" source. You can finally prove that your content guides are driving brand interest.
+
+**Status: TECHNICAL ROADMAP COMPLETE.**
